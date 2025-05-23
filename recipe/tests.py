@@ -6,3 +6,7 @@ class CategoryModelTest(TestCase):
         category = Category.objects.create(name="Dessert")
         self.assertEqual(str(category), "Dessert")
         self.assertEqual(list(iter(category)), list("Dessert"))
+
+class RecipeModelTest(TestCase):
+    def setUp(self):
+        self.category = Category.objects.create(name="Main Course")
