@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import Recipe, Category
 
-admin.site.register(Recipe, RecipeAdmin)
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(Recipe)
+admin.site.register(Category)
 
 class RecipeAdmin(admin.ModelAdmin):
     list_display = ('title', 'category', 'created_at', 'updated_at')
