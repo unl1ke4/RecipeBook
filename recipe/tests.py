@@ -13,7 +13,7 @@ class RecipeModelTest(TestCase):
     
     def test_create_recipe(self):
         recipe = Recipe.objects.create(
-            title="Borshch",
+            title="Borscht",
             description="Traditional Ukrainian beet soup",
             instructions="1. Chop vegetables\n2. Boil water\n3. Add ingredients",
             ingredients="Beetroot, Potatoes, Carrots, Onion, Cabbage",
