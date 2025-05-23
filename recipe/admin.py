@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import Recipe, Category
 
-admin.site.register(Category)
-admin.site.register(Recipe)
+admin.site.register(Recipe, RecipeAdmin)
+admin.site.register(Category, CategoryAdmin)
 
 class RecipeAdmin(admin.ModelAdmin):
     list_display = ('title', 'category', 'created_at', 'updated_at')
@@ -13,7 +13,3 @@ class RecipeAdmin(admin.ModelAdmin):
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
-
-
-admin.site.register(Recipe, RecipeAdmin)
-admin.site.register(Category, CategoryAdmin)
